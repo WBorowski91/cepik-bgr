@@ -1,1 +1,25 @@
-<p>add-policy works!</p>
+<div class="form-frouprow">
+    <label class="col-sm-2 col-form-label">Numer polisy</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="number">
+    </div>
+    <label class="col-sm-2 col-form-label">Towarzystwo ubezpieczeniowe</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="company">
+    </div>
+    <label class="col-sm-2 col-form-label">Data początku</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="startDate">
+    </div>
+    <label class="col-sm-2 col-form-label">Data końca</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="endDate">
+    </div>
+    <label class="col-sm-2 col-form-label">Id pojazdu</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="vechicleId">
+    </div>
+</div><br />
+
+<button (click)="addPolicy()" *ngIf="policy.id==0" class="btn btn-primary">Dodaj</button>
+<button (click)="updatePolicy()" *ngIf="policy.id!=0" class="btn btn-primary">Zmień</button>
